@@ -3,7 +3,7 @@
 Time::Time(int sec, int min, int hour){
     if(hour){
         hour_ = (min/60)+(sec/3600)+(hour);
-        min_ = ((sec/3600)/60) + min % 60;
+        min_ = ((sec%3600)/60) + min % 60;
         sec_ = (sec%3600)%60;
     }
     else if(min){
